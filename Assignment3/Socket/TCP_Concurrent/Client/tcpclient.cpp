@@ -88,10 +88,7 @@ int main(int argc, char **argv) {
 
     cout<<"----------Client Running----------\n";
     /* send the message line to the server */
-
-    if (n < 0) 
-      error("ERROR writing to socket");
-
+	cout<<n<<endl;
     int file_size = get_file_size(filename);                                 // Getting fileSize
     string str = "Hello "+string(filename)+" "+to_string(file_size);         // Creating Hello message to be transfered
     n = write(sockfd, str.c_str(), strlen(str.c_str()));                     // sending hello message

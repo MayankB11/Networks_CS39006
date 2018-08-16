@@ -189,7 +189,7 @@ int main(int argc, char **argv) {
     char* a;
     while(1){      
       bzero(buf, BUFSIZE);                // Clear the buffer for reading new data
-      n = recv(childfd, buf, BUFSIZE,0);  // Receiving data in the buffer  
+      n = read(childfd, buf, BUFSIZE);  // Receiving data in the buffer  
       if(n < 0)
         error("ERROR reading from socket");
       count+=n;                          // Maintaining count of total data received in the buffer

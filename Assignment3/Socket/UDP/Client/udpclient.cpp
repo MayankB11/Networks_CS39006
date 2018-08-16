@@ -155,6 +155,7 @@ int main(int argc, char **argv) {
                 break;
             }
             else{
+                retransmitted++;
                 cout<<" Wrong ACK received"<<endl;
             }
         }

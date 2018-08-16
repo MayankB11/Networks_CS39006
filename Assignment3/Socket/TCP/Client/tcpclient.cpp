@@ -126,7 +126,7 @@ int main(int argc, char **argv) {
             break;
         }
         else if(count > 0){
-            send(sockfd, buf, count, 0);                                   // Sending the data
+            write(sockfd, buf, count);                                   // Sending the data
             total_count+=count;
             cout<<count<<" bytes sent, Total bytes by now : "<<total_count<<endl;
             if(total_count == file_size){
